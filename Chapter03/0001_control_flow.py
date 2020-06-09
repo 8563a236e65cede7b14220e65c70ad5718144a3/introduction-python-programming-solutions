@@ -152,3 +152,137 @@ while check_number != "done":
         largest_number = int(check_number)
         print(f"Largest Number is {largest_number}")
     check_number = input("Enter a number to check whether it is largest or not")
+
+'''
+    Range function
+    range([start,] stop [,step])
+'''
+
+#Program 3.14
+#Demonstrate for loop using range()
+print("Only \"stop\" argument value specified in range function")
+for i in range(3):
+    print(f"{i}")
+print("Both \"start\" and \"stop\" argument values specified in range function")
+for i in range(2, 5):
+    print(f"{i}")
+print("All three arguments \"start\", \"stop\" and \"step\" specified in range function")
+for i in range(1, 6, 3):
+    print(f"{i}")
+
+#Program 3.15
+#Iterate through string
+for each_character in "Blue":
+    print(f"Iterate through character {each_character} in the string \"Blue\"")
+
+#Program 3.16
+#Find sum of all odd and even numbers
+number = int(input("Enter a number"))
+even = 0
+odd = 0
+for i in range(number):
+    if i % 2 == 0:
+        even = even + i
+    else:
+        odd = odd + i
+print(f"Sum of Even numbers are {even} and Odd numbers are {odd}")
+
+#Program 3.17
+#Factorial
+number = int(input("Enter number"))
+factorial = 1
+if number < 0:
+    print("Factorial doesn't exist for negative numbers")
+elif number == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, number + 1):
+        factorial = factorial * i
+print(f"The factorial of number {number} is {factorial}")
+
+#Program 3.18
+#Infinite while loop and break
+n = 0
+while True:
+    print(f"The latest value of n is {n}")
+    n = n + 1
+
+n = 0
+while True:
+    print(f"The latest value of n is {n}")
+    n = n + 1
+    if n > 5:
+        print(f"The value of n is greater than 5")
+        break
+
+#Program 3.19:
+#Check whether a number is prime
+number = int(input("Enter a number > 1:"))
+prime = True
+for i in range(2, number):
+    if number % i == 0:
+        prime = False
+        break
+if prime:
+    print(f"{number} is a prime")
+else:
+    print(f"{number} is not a prime")
+
+#Program 3.20
+#continue statement
+n = 10
+attempt = 0
+while n > 0:
+    print(f"The current value of number is {n}")
+    if n == 5:
+        print(f"Breaking at {n}")
+        n = 10
+        attempt = attempt + 1
+        if attempt == 2:
+            break
+        continue
+    n = n - 1
+
+#Program 3.21
+#Check for ValueError Exception
+while True:
+    try:
+        number = int(input("Please enter a number:"))
+        print(f"The number you have entered is {number}")
+        break
+    except ValueError:
+        print("Oops! That was no valid number. Try again...")
+
+#Program 3.22
+#Check for ZeroDivisionError
+x = int(input("Enter value for x:"))
+y = int(input("Enter value for y:"))
+
+try:
+    result = x / y
+except ZeroDivisionError:
+    print("Division by Zero!")
+else:
+    print(f"Result is {result}")
+finally:
+    print("Executing finally clause")
+
+#Program 3.23
+#Read list of numbers until user enters "done". Use try and except
+#to detect if user does not enter number. Display Total, Count and Average
+total = 0
+count = 0
+while True:
+    num = input("Enter a number:")
+    if num == "done":
+        print(f"Sum of all the entered numbers is {total}")
+        print(f"Count of total numbers entered {count}")
+        print(f"Average is {total / count}")
+        break
+    else:
+        try:
+            total += float(num)
+        except:
+            print("Invalid input")
+            continue
+        count += 1
