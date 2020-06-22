@@ -64,6 +64,7 @@ Escape sequences
     \"      Inserts a Double Quote character in the string
     \n      Inserts a New Line in the string
     \t      Inserts a tab in the string
+    \b      Inserts a backspace in the string
     \r      Inserts a carriage return in the string
     \u      Inserts a unicode character in the string
     \0oo    Inserts a character in the string based on its Octal value

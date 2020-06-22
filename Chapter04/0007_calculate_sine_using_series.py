@@ -10,6 +10,7 @@ degrees = int(input("Enter the degrees"))
 nterms = int(input("Enter the number of terms"))
 radians = degrees * math.pi / 180
 
+
 def calculate_sin():
     result = 0
     numerator = radians
@@ -21,9 +22,11 @@ def calculate_sin():
         denominator = denominator * (2 * i) * (2 * i + 1)
     return result
 
+
 def main():
     result = calculate_sin()
     print(f"value of sin(x) calculated using the series is {result}")
+
 
 if __name__ == "__main__":
     main()
