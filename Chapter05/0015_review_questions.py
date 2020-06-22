@@ -99,4 +99,13 @@ Review Questions
         and true.
 
 8)  You would get a TypeError exception
+
+10) Print the entire string variable message
+
+17) a) False
+    b) 2
+    c) True
+    d) PARIS
+    e) 6
+    f) london
 """
