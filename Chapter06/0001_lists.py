@@ -52,6 +52,7 @@ string_to_list
 
 friends = ["j", "o", "e", "y"]
 friends + quote     #TypeError
+friends + list(quote)
 
 """
 Indexing and Slicing in Lists
