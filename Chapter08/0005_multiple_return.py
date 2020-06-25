@@ -1,0 +1,21 @@
+"""
+Demonstrate the Return of Multiple Values
+from a Function
+"""
+
+
+def return_multiple_items():
+    monument = input("Which is your favourite monument? ")
+    year = input("When was it constructed? ")
+    return monument, year
+
+
+def main():
+    mnt, yr = return_multiple_items()
+    print(f"My favourite monument is {mnt} and it was constructed in {yr}")
+    result = return_multiple_items()
+    print(f"My favourite monument is {result[0]} and it was constructed int {result[1]}")
+
+
+if __name__ == "__main__":
+    main()
