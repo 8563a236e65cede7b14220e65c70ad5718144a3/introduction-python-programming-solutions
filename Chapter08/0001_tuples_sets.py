@@ -1,9 +1,9 @@
 """
 Tuples and Sets
     In mathematics a tuple is a finite ordered list (sequence) of
-    elemenets.
+    elements.
     A tuple is defined as a data structure that comprises and
-    ordered, finite sequence of immutable, heterogenous elements
+    ordered, finite sequence of immutable, heterogeneous elements
     that are of fixed sizes.
     Tuples solve the problem of returning more than one value
     from a function and also for passing multiple values through
@@ -192,7 +192,7 @@ Tuples can be used as key:value pairs to build dictionaries
 """
 fish_weight_kg = (
     ("white_shark", 520),
-    ("beluga", "1571"),
+    ("beluga", 1571),
     ("greenland_shark", 1400)
 )
 
