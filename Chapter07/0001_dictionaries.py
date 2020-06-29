@@ -1,7 +1,7 @@
 """
 Dictionaries
     Also known as associative memories or associative arrays
-    A citionary is a collection of an unordered set of key:value
+    A dictionary is a collection of an unordered set of key:value
     pairs, with the requirements that the keys are unique within
     a dictionary.
 
