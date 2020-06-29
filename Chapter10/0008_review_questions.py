@@ -134,6 +134,45 @@ match()     regex_object.           This method returns None if the string
         \d+ matches "123" in "123abc"
         \d+? matches "1" in "123abc"
 
-
-
+6)
+Match Object Methods
+---------------------------------------------------------------------------------------
+group()     match_object.               This method returns one or more subgroups
+                group([group1,...])     of the match. If there is a single argument
+                                        the result is a single string. If there are
+                                        multiple arguments, the result is a tuple with
+                                        one item per argument. Without arguments,
+                                        group1 defaults to zero and the whole match is
+                                        returned. If a groupN argument is zero, the
+                                        corresponding return value is the entire
+                                        matching string. If it is in the inclusive
+                                        range of [1...99], then it is the string
+                                        matching the corresponding parenthesized
+                                        group. If the group number is negative or
+                                        larger than the number of groups defined in
+                                        the pattern, then IndexError is raised.
+                                        If a group is contained in a part of the
+                                        pattern that did not match, the corresponding
+                                        result in None. If a group is contained in a
+                                        part of the pattern that matched multiple times
+                                        the last match is returned
+---------------------------------------------------------------------------------------
+groups()    match_object.               Returns a tuple containing all the subgroups
+                groups(default=None)    of the match, from 1 to however many groups
+                                        are in the pattern. Default argument is used
+                                        for groups that did not participate in the
+                                        match; it defaults to None
+---------------------------------------------------------------------------------------
+start()     match_object.               start() returns the index of the start and
+                start([group])          end method returns the index of the the end
+end()       match_object.               of the substring matched by group. Default value
+                end([group])            of group is zero, which means the whole matched
+                                        substring is returned else a value of -1 is
+                                        returned if a group exists but did not contribute
+                                        to the match
+---------------------------------------------------------------------------------------
+span()      match_object.               This method returns a tuple containing the
+                span([group])           (m.start(group), m.end(group)) positions of the
+                                        match
+---------------------------------------------------------------------------------------
 """
